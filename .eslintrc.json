@@ -4,6 +4,29 @@
   "rules": {
     "no-console": "off",
     "no-plusplus": "off",
-    "prefer-destructuring": "off"
+    "prefer-destructuring": "off",
+    "prefer-template": "off",
+    "no-path-concat": "off",
+    "func-names": "off",
+    "no-var": "off",
+    "no-undef": "off",
+    "consistent-return": "off",
+    "no-restricted-globals": "off",
+    "eqeqeq": "off",
+    "lines-around-directive": "off",
+    "vars-on-top": "off",
+    "strict": "off",
+    "object-shorthand": "off",
+    "no-unused-vars": "off",
+    "spaced-comment": "off",
+    "one-var": "off",
+    "no-loop-func": "off",
+    "no-use-before-define": "off",
+    "no-shadow": "off",
+    "no-param-reassign": "off",
+    "no-useless-escape": "off",
+    "prefer-rest-params": "off",
+    "no-unneeded-ternary": "off",
+    "no-else-return": "off"
   }
 }

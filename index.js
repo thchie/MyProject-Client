@@ -2,7 +2,7 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const flash = require('express-flash');
 const session = require('express-session');
-const Movie = require('./models/movie.js');
+const asChapter = require('./AS_Chapter');
 
 const app = express();
 
@@ -13,6 +13,9 @@ app.set('view engine', 'handlebars');
 // Body Parser Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+//Defining middleware to serve static files
+app.use('/static', express.static('public'));
 
 // initialise session middleware - flash-express depends on it
 app.use(
@@ -30,12 +33,9 @@ app.use(flash());
 app.get('/', (req, res) => {
   console.log('In get movie function');
 
-  Movie.find({}).then(respond => {
-    const movies = JSON.parse(JSON.stringify(respond));
-    res.render('index', {
-      title: 'Movie App',
-      movies,
-    });
+  res.render('index', {
+    title: 'Computer Science Topical Past Papers',
+    asChapter,
   });
 });
 
